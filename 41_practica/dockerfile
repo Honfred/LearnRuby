@@ -1,0 +1,9 @@
+FROM ruby:latest
+
+ENV SRC_PATH /usr/service_1
+WORKDIR $SRC_PATH
+
+COPY ./Gemfile* $SRC_PATH/
+RUN bundle install
+
+COPY . .

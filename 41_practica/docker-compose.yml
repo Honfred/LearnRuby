@@ -1,0 +1,16 @@
+version: '3'
+services:
+  service_1:
+    build: .
+    volumes:
+      - .:/usr/service_1
+
+  rabbitmq:
+    image: rabbitmq:management-alpine
+    ports:
+    - 15672:15672
+    volumes:
+    - rabbit:/var/lib/rabbitmq
+    
+volumes:
+  rabbit:
