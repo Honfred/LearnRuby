@@ -1,0 +1,3 @@
+[submodule "cloud_app"]
+	path = cloud_app
+	url = ./cloud_app/
